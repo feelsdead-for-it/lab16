@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int n, i, k;
+    
+    k = 0;
+    cin >> n;
+
+    int* a = new int [n];
+    
+    for(i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+   
+    for (i = 1; i < n; i++)
+    {
+        if (a[k] != a[i])
+        {
+            k++;
+            a[k] = a[i];
+        }
+    }
+    k++;
+    for (i = 0; i < k; i++){
+        cout << a[i] << " ";
+    }
+    cout << endl;
+
+}
